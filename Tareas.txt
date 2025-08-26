@@ -1,0 +1,23 @@
+Compuerta NOT con NAND
+CHIP Not 
+{
+    IN in, a;
+    OUT out;
+    
+    PARTS:
+    //// Replace this comment with your code.
+    Nand (a = a, b = in, out = out);
+    }
+
+COMPUERTA AND EN NANDS
+CHIP And 
+{
+    IN a, b;
+    OUT out;
+    
+    PARTS:
+    //// Replace this comment with your code.
+    Nand (a = a, b = b, out = notab);
+    Nand (a = notab, b= notab, out = notabnot);
+ }
+    

@@ -1,0 +1,29 @@
+ 1) IN x, y,z;
+    OUT f;
+    
+    PARTS:
+    //// Replace this comment with your code.
+    Not (in=z, out=notz);
+    Not (in=x, out=notx);
+    Not (in=y, out=noty);
+
+    And (a=notz, b=notx, out=xnotz);
+    And (a=notz, b=noty, out=ynotz);
+    Or (a=xnotz, b=ynotz, out=f);
+
+2)
+CHIP Mux 
+{
+    IN x, y,z;
+    OUT f;
+    
+    PARTS:
+    //// Replace this comment with your code.
+    Not (in=x, out=notx);
+    Xor (a=y, b=z, out=yORz);
+
+    And (a=notx, b=yORz, out=notxyXORz);
+    And (a=x, b=y, out=xy);
+    Or(a=notxyXORz, b=xy, out=f);
+    
+}

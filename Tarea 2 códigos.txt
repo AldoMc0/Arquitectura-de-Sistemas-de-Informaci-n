@@ -1,0 +1,54 @@
+1)
+CHIP Mux 
+{
+    IN x, y;
+    OUT f;
+    
+    PARTS:
+    //// Replace this comment with your code.
+    And  (a=x, b=y,out=xy);
+    Not (in=xy, out=notxy);
+
+}
+
+2) 
+CHIP Mux 
+{
+    IN x, y;
+    OUT f;
+    
+    PARTS:
+    //// Replace this comment with your code.
+    Not (in=x, out=notx);
+    Not (in=y, out=noty);
+    Or (a=notx, b=noty, out=f);
+    
+}
+
+3)
+CHIP Mux 
+{
+    IN x, y;
+    OUT f;
+    
+    PARTS:
+    //// Replace this comment with your code.
+    Or  (a=x, b=y,out=xy);
+    Not (in=xy, out=notxy);
+
+    }
+4)
+CHIP Mux 
+{
+    IN x, y;
+    OUT f;
+    
+    PARTS:
+    //// Replace this comment with your code.
+    Not (in=x, out=notx);
+    Not (in=y, out=noty);
+    And (a=notx, b=noty, out=f);
+    
+}
+
+
