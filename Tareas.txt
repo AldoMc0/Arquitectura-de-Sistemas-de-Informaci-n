@@ -20,4 +20,16 @@ CHIP And
     Nand (a = a, b = b, out = notab);
     Nand (a = notab, b= notab, out = notabnot);
  }
-    
+
+COMPUERTA OR EN NAND
+CHIP Or 
+{
+    IN a, b;
+    OUT out;
+
+    PARTS:
+    //// Replace this comment with your code.
+    Nand(a=a, b=a, out=notA);
+    Nand(a=b, b=b, out=notB);
+    Nand(a=notA, b=notB, out=out);
+}
