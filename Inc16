@@ -1,0 +1,24 @@
+CHIP Inc16 
+{
+    IN in[16];
+    OUT out[16];
+
+    PARTS:
+    //// Replace this comment with your code.
+    HalfAdder (a=true, b=in[0], sum=out[0], carry= c0);
+    FullAdder (a=false, b=in[1], sum=out[1], carry= c1);
+    FullAdder (a=false, b=in[2], sum=out[2], carry= c2);
+    FullAdder (a=false, b=in[3], sum=out[3], carry= c3);
+    FullAdder (a=false, b=in[4], sum=out[4], carry= c4);
+    FullAdder (a=false, b=in[5], sum=out[5], carry= c5);
+    FullAdder (a=false, b=in[6], sum=out[6], carry= c6);
+    FullAdder (a=false, b=in[7], sum=out[7], carry= c7);
+    FullAdder (a=false, b=in[8], sum=out[8], carry= c8);
+    FullAdder (a=false, b=in[9], sum=out[9], carry= c9);
+    FullAdder (a=false, b=in[10], sum=out[10], carry= c10);
+    FullAdder (a=false, b=in[11], sum=out[11], carry= c11);
+    FullAdder (a=false, b=in[12], sum=out[12], carry= c12);
+    FullAdder (a=false, b=in[13], sum=out[13], carry= c13);
+    FullAdder (a=false, b=in[14], sum=out[14], carry= c14);
+    FullAdder (a=false, b=in[15], sum=out[15], carry= c15);
+}
