@@ -34,3 +34,21 @@ CHIP HalfAdder
     Xor (a=a, b=b, out=sum);
     And (a=a, b=b, out=carry);
 }
+
+CHIP FullAdder 
+{
+    IN a, b, c;  
+    OUT sum,     
+        carry; 
+
+    PARTS:
+    //// Replace this comment with your code.
+    Xor (a=a, b=b, out=abXor);
+    Xor (a=abXor, b=c, out=sum);
+
+    And (a=a, b=b, out=abAnd);
+    And (a=abXor, b=c, out=abXorc);
+
+    Or (a=abAnd, b=abXorc, out=carry);
+    
+}
