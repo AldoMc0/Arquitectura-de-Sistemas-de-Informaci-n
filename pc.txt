@@ -1,0 +1,17 @@
+CHIP PC 
+{
+    IN in[16], reset, load, inc;
+    OUT out[16];
+    
+    PARTS:
+    //// Replace this comment with your code.
+    Inc16(in=presentOut, out=incrementedOut);
+    
+    Mux16(a=presentOut, b=in, sel=load, out=loadOrIncOut);
+    Mux16(a=loadOrIncOut, b=false, sel=reset, out=resetOrLoadOut);
+    
+    Or(a=load, b=inc, out=loadOrInc);
+    Or(a=loadOrInc, b=reset, out=anyAction);
+    
+    Register(in=resetOrLoadOut, load=anyAction, out=out, out=presentOut);
+}
